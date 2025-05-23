@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+:root {
+    --primary-bg: #1a1a2e;  
+    --secondary-bg: #22223b; 
+    --accent-color-1: #e0b0ff; 
+    --accent-color-2: #4dd0e1;
+    --text-color-light: #e0e0e0; 
+    --text-color-dark: #333333; 
+    --border-color: #5a189a;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace; 
+    background: var(--primary-bg);
+    color: var(--text-color-light);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 20px; 
+    line-height: 1.6;
+    text-align: center; 
+}
+
+.container,
+#output-area,
+.definitions-container {
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px var(--shadow-color); 
+    max-width: 600px; 
+    width: 100%; 
+    border: 1px solid var(--border-color);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 3.5em;
+    color: var(--accent-color-2);
+    text-shadow: 0 0 10px var(--accent-color-2), 0 0 20px rgba(77, 208, 225, 0.5); 
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-size: 1.3em;
+    color: var(--accent-color-1);
+    font-style: italic;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+#wordInput {
+    width: calc(100% - 20px); 
+    padding: 15px 20px;
+    font-size: 1.2em;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--primary-bg); 
+    color: var(--text-color-light);
+    outline: none; 
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#wordInput::placeholder {
+    color: rgba(224, 224, 224, 0.6);
+}
+
+#wordInput:focus {
+    border-color: var(--accent-color-2);
+    box-shadow: 0 0 12px rgba(77, 208, 225, 0.6);
+}
+
+#checkPalindrome {
+    background-color: var(--accent-color-1);
+    color: var(--text-color-dark); 
+    padding: 18px 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#checkPalindrome:hover {
+    background-color: var(--accent-color-2); 
+    color: var(--primary-bg); 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+#checkPalindrome:active {
+    transform: translateY(0); 
+}
+
+#output-area p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: var(--text-color-light);
+}
+
+#output-area span {
+    font-weight: bold;
+    color: var(--accent-color-2);
+    word-break: break-all; 
+}
+
+#results-text {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 20px;
+       .is-palindrome { color: #74ad33; }
+       .is-semordnilap { color: #aae48d; }
+       .is-neither { color: #e3675f; }
+}
+
+.definitions-container h2 {
+    font-size: 1.8em;
+    color: var(--accent-color-1);
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px var(--accent-color-1);
+}
+
+.definitions-container h3 {
+    font-size: 1.4em;
+    color: var(--accent-color-2);
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.definitions-container p {
+    font-size: 1em;
+    color: var(--text-color-light);
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .container,
+    #output-area,
+    .definitions-container {
+        padding: 20px;
+    }
+    #wordInput,
+    #checkPalindrome {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    .slogan {
+        font-size: 1.1em;
+    }
+}

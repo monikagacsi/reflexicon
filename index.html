@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexicon App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> Reflexicon</h1>
+    <h2>Words in Reverse</h2>
+    <div class="container">
+        <input type="text" id="wordInput" placeholder="Enter a word...">
+        <button id="checkPalindrome">Mirror Word</button>
+    </div>
+    <div id="output-area">
+        <p>Original: <span id="original-word-display"></span></p>
+        <p>Mirrored: <span id="mirrored-word-display"></span></p>
+        <p id="results-text"></p>
+    </div>
+    <div class="definitions-container">
+        <h3>Palindrome</h3>
+        <p>A word that reads the exact same forwards and backwards! It's like a linguistic mirror. Think "Madam," "Level," or "Racecar."</p>
+        <h3>Semordnilap</h3>
+        <p>This word spells a different word backwards! Like "Desserts" becoming "Stressed," or "Stop" flipping to "Pots."</p>
+    </div>
+    <script src="logic.js" defer></script>
+</body>
+</html>
