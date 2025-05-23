@@ -121,9 +121,6 @@ h1 {
     font-size: 1.4em;
     font-weight: bold;
     margin-top: 20px;
-       .is-palindrome { color: #74ad33; }
-       .is-semordnilap { color: #aae48d; }
-       .is-neither { color: #e3675f; }
 }
 
 .definitions-container h2 {
